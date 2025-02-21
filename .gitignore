@@ -1,0 +1,46 @@
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Build output
+/build
+/.next/
+/out/
+
+# Coverage
+/coverage
+
+# Vercel
+.vercel/
+
+# System Files
+.DS_Store
+
+# Environment files
+.env*.local
+
+# TypeScript build information
+*.tsbuildinfo
+next-env.d.ts
+
+# Package lock files
+package-lock.json
+yarn.lock
+.pnpm/
+
+# IDE specific files
+.vscode/
+.idea/
+
+# MacOS
+*.swp
+*~
+
+# Windows
+Thumbs.db
+Desktop.ini
