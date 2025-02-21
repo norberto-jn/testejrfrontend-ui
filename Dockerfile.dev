@@ -1,7 +1,0 @@
-FROM node:18.19.1-alpine3.18
-
-WORKDIR /usr/src/workspace/testejrfrontend-ui
-
-CMD [ -d "node_modules" ] && npm run dev || npm i && npm run dev
-
-EXPOSE 5173
