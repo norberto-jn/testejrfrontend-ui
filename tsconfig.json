@@ -13,6 +13,16 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
+ 
+
+        /* Adicionar baseUrl */
+        "baseUrl": ".",  // Define a raiz do projeto como base para os imports
+
+        /* Adicionar paths */
+        "paths": {
+          "/src/*": ["src/*"]  // Faz com que todos os imports relativos a 'src' sejam resolvidos a partir da raiz
+        },
+
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
