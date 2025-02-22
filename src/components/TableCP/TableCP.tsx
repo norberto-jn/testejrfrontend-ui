@@ -25,19 +25,21 @@ const TableCP = <T extends object = any>({
   const [internalLoading, setInternalLoading] = useState(false);
 
   const start = () => {
+    
     setInternalLoading(true);
-    // Simula uma requisição assíncrona
+
     setTimeout(() => {
       setSelectedRowKeys([]);
       setInternalLoading(false);
-      if (onReload) onReload(); // Chama o callback de reload, se fornecido
+      if (onReload) onReload();
     }, 1000);
+
   };
 
   const onSelectChange = (newSelectedRowKeys: React.Key[]) => {
     console.log('selectedRowKeys changed: ', newSelectedRowKeys);
     setSelectedRowKeys(newSelectedRowKeys);
-    if (onSelectionChange) onSelectionChange(newSelectedRowKeys); // Chama o callback de seleção, se fornecido
+    if (onSelectionChange) onSelectionChange(newSelectedRowKeys);
   };
 
   const rowSelection: TableRowSelection<T> = externalRowSelection || {

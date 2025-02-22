@@ -1,8 +1,8 @@
 import { Navigate, Route, BrowserRouter as Router, Routes as Switch } from 'react-router-dom';
-import Login from '/src/pages/Login';
-import NotFound from '/src/pages/NotFound';
-import Home from '/src/pages/Home';
 import ProtectedRoute from '/src/utils/ProtectedRoute';
+import Home from '/src/pages/Home/Home';
+import NotFound from '/src/pages/NotFound/NotFound';
+import Login from '/src/pages/Login/Login';
 
 function App() {
   return (

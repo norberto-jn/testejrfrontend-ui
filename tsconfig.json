@@ -1,34 +1,36 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
     "module": "ESNext",
     "skipLibCheck": true,
-
-    /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-
- 
-
-        /* Adicionar baseUrl */
-        "baseUrl": ".",  // Define a raiz do projeto como base para os imports
-
-        /* Adicionar paths */
-        "paths": {
-          "/src/*": ["src/*"]  // Faz com que todos os imports relativos a 'src' sejam resolvidos a partir da raiz
-        },
-
-    /* Linting */
+    "baseUrl": ".",
+    "paths": {
+      "/src/*": [
+        "src/*"
+      ]
+    },
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "src"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }
