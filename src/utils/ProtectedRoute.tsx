@@ -1,11 +1,8 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
+import IProtectedRouteProps from '/src/utils/interfaces/IProtectedRouteProps';
 
-interface ProtectedRouteProps {
-  children: React.ReactNode;
-}
-
-const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
+const ProtectedRoute: React.FC<IProtectedRouteProps> = ({ children }) => {
   // Verifica se o token está presente no localStorage
   const token = localStorage.getItem('token');
 

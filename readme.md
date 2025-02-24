@@ -1,3 +1,55 @@
+## Passo a Passo para Rodar o Projeto em Sua Máquina
+
+1. **Criação do diretório para o projeto:**
+   Crie uma pasta onde o back-end e o front-end serão colocados:
+   ```bash
+   mkdir project
+   ```
+
+2. **Acessar o diretório criado:**
+   Entre na pasta `project`:
+   ```bash
+   cd project
+   ```
+
+3. **Clonar os repositórios do projeto:**
+   Agora, clone os dois repositórios (back-end e front-end):
+   ```bash
+   git clone https://github.com/norberto-jn/testejrbackend-api.git
+   git clone https://github.com/norberto-jn/testejrfrontend-ui.git
+   ```
+
+4. **Copiar o arquivo `docker-compose.yaml`:**
+   Copie o arquivo `docker-compose.yaml` de um dos repositórios (`testejrbackend-api.git` e `testejrfrontend-ui.git`) e cole-os na raiz do diretório `project`.
+
+5. **Rodar o Docker Compose:**
+   Agora, dentro da pasta `project`, execute o comando:
+   ```bash
+   docker compose up -d
+   ```
+
+6. **Instalar Docker Compose (caso necessário):**
+   Se você não tem o Docker Compose instalado em sua máquina, siga o tutorial de instalação oficial [aqui](https://docs.docker.com/compose/install/).
+
+7. **Verificar se o projeto está rodando:**
+   Após o Docker Compose subir os containers, você pode verificar o status do projeto com:
+   ```bash
+   docker compose ps
+   ```
+
+8. **Acessar a aplicação no navegador:**
+   Abra um navegador de sua preferência e acesse a URL:
+   ```
+   http://localhost:5173/auth/login
+   ```
+
+9. **Login:**
+   Use as credenciais abaixo para fazer login:
+   - **Usuário:** norberto@gmail.com
+   - **Senha:** 123
+
+Após seguir esses passos, o seu projeto deve estar rodando corretamente. Se tiver algum problema, me avise!
+
 ## INSTRUÇÕES PARA O TESTE TÉCNICO
 
 - Crie um fork deste projeto (https://github.com/CAPYS-IT/TestePlenoFrontend).

@@ -1,60 +1,9 @@
-import { CSSProperties, useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ImageLinearGradientCP, SpinnerCP } from '/src/components';
 import '/src/index.css';
 import LoginForm from '/src/pages/Login/components/LoginFormCP/LoginFormCP';
-
-const styles = {
-    container: {
-        width: '100vw',
-        height: '100vh',
-        display: 'flex',
-        flexWrap: 'wrap'
-    } as CSSProperties,
-
-    imageSection: {
-        width: '71.5%',
-        height: '100vh',
-        background: `linear-gradient(rgba(80, 56, 238, 0.35), rgba(0, 0, 0, 0.3)), url('/img/escola.jpg')`,
-        backgroundSize: 'cover',
-    } as CSSProperties,
-
-    formSection: {
-        width: '28.5%',
-        height: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        textAlign: 'center',
-    } as CSSProperties,
-
-    separatorLine: {
-        width: '0.25%',
-        height: '70vh',
-        marginTop: '15vh',
-        marginLeft: '-71.6%',
-        backgroundColor: '#31baff',
-    } as CSSProperties,
-
-    formWrapper: {
-        width: '100%',
-        height: '60%',
-        display: 'flex',
-        justifyContent: 'center',
-    } as CSSProperties,
-
-    loadingSpinner: {
-        width: '100%',
-        display: 'flex',
-        justifyContent: 'center',
-    } as CSSProperties,
-
-    avatarContainer: {
-        display: 'flex',
-        justifyContent: 'center',
-        marginBottom: '3.5rem',
-    } as React.CSSProperties,
-}
+import '/src/pages/Login/css/login-style.css';
 
 const useLogin = () => {
     const [error, setError] = useState<string | null>(null);
@@ -97,11 +46,11 @@ const Login = () => {
     const { handleLogin, error, isLoading } = useLogin();
 
     return (
-        <main style={styles.container}>
+        <main className="container">
 
-            <div style={styles.formSection}>
+            <div className="formSection">
                 <LoginForm onLogin={handleLogin} error={error} isLoading={isLoading} />
-                <div style={{ ...styles.loadingSpinner, display: isLoading ? 'flex' : 'none' }}>
+                <div className="loadingSpinner" style={{ display: isLoading ? 'flex' : 'none' }}>
                     <SpinnerCP size={32} />
                 </div>
             </div>
@@ -125,7 +74,7 @@ const Login = () => {
                 }}
             />
 
-            <div style={styles.separatorLine}></div>
+            <div className="separatorLine"></div>
 
         </main>
     );

@@ -4,23 +4,18 @@ import { Layout } from 'antd';
 import HeaderMenu from "/src/utils/HeaderMenu";
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import IDataType from "/src/pages/Home/interfaces/DataType";
 
 const { Header, Content } = Layout;
 
-interface DataType {
-    key: React.Key;
-    Tarefa: string;
-    description: string;
-}
-
-const columns: TableColumnsType<DataType> = [
+const columns: TableColumnsType<IDataType> = [
     { title: 'ID', dataIndex: 'key' },
     { title: 'Tarefa', dataIndex: 'Tarefa' },
     { title: 'Descrição', dataIndex: 'description' },
 ];
 
 const Home = () => {
-    const [dataSource, setDataSource] = useState<DataType[]>([]);
+    const [dataSource, setDataSource] = useState<IDataType[]>([]);
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
 
@@ -80,7 +75,7 @@ const Home = () => {
                 <HeaderMenu />
             </Header>
             <Content style={{ padding: '24px' }}>
-                <TableCP<DataType>
+                <TableCP<IDataType>
                     columns={columns}
                     dataSource={dataSource}
                     onReload={handleReload}

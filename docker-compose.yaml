@@ -1,0 +1,37 @@
+version : '3'
+
+networks:
+  default:
+    driver: bridge
+
+services :
+
+  # redis:   
+  #   image: redis:latest
+  #   container_name: redis-server
+  #   restart: always 
+  #   ports:      
+  #     - 6380:6379
+      
+  testejrbackend-api :
+    build:
+      context: ./testejrbackend-api
+      dockerfile: Dockerfile.dev
+    container_name: testejrbackend-api
+    restart: always
+    volumes:
+      - ./testejrbackend-api:/src/apiToDo
+    ports:
+      - "8080:8080"
+      - "8181:8181"
+
+  testejrfrontend-ui :
+    build:
+      context: ./testejrfrontend-ui
+      dockerfile: Dockerfile.dev
+    container_name: testejrfrontend-ui
+    restart: always
+    volumes:
+      - ./testejrfrontend-ui/:/usr/src/workspace/testejrfrontend-ui
+    ports:
+      - 5173:5173

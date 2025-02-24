@@ -1,15 +1,6 @@
-import React from 'react';
 import { notification } from 'antd';
-import type { NotificationArgsProps } from 'antd';
-
-type NotificationType = 'success' | 'info' | 'warning' | 'error';
-
-interface NotificationCPProps {
-  message: string;
-  type: NotificationType;
-  placement?: NotificationArgsProps['placement'];
-  description?: string;
-}
+import React from 'react';
+import NotificationCPProps from '/src/components/NotificationCP/interfaces/INotificationCPProps';
 
 const NotificationCP: React.FC<NotificationCPProps> = ({
   message,
